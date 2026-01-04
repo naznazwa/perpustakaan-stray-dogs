@@ -1,0 +1,327 @@
+/* Color Palette */
+:root {
+    --dark-coffee: #251605;
+    --sand: #AFA060;
+    --faded-copper: #AD8350;
+    --white: #FFFFFF;
+    --deep-crimson: #c04f4f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--dark-coffee);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header & Nav */
+header {
+    background-color: var(--dark-coffee);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin-bottom: 30px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a, .social-links a {
+    color: var(--sand);
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+}
+
+/* Hover Effect */
+.nav-links a:hover, .social-links a:hover {
+    color: var(--deep-crimson);
+    border-bottom: 2px solid var(--deep-crimson);
+}
+
+/* Hero Section */
+.hero {
+    padding: 100px 0;
+    background-color: var(--sand);
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: var(--dark-coffee);
+    margin-bottom: 20px;
+}
+
+/* Koleksi Section */
+.koleksi {
+    padding: 60px 0;
+    background-color: var(--white);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.koleksi-box {
+    background-color: var(--faded-copper);
+    padding: 30px;
+    border-radius: 8px;
+    color: var(--white);
+    text-align: center;
+}
+
+.koleksi-box2 {
+    background-color: var(--deep-crimson);
+    padding: 30px;
+    border-radius: 8px;
+    color: var(--white);
+    text-align: center;
+}
+
+.koleksi-box h3 {
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--sand);
+    padding-bottom: 10px;
+}
+
+.koleksi-box2 h3 {
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--sand);
+    padding-bottom: 10px;
+}
+
+.koleksi-box ul {
+    list-style-position: inside;
+}
+
+.koleksi-box li {
+    margin-bottom: 8px;
+}
+
+/* CTA Section */
+.cta {
+    padding: 80px 0;
+    text-align: center;
+    background-color: var(--dark-coffee);
+    color: var(--white);
+}
+
+.cta h2 {
+    color: var(--sand);
+    margin-bottom: 10px;
+}
+
+.cta p {
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+    padding: 150px 0;
+    text-align: center;
+    background-color: var(--white);
+    border-top-width: 10px solid var(--faded-copper);
+}
+
+.social-links {
+    margin: 20px 0;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: var(--dark-coffee);
+}
+
+.copyright {
+    font-size: 0.8rem;
+    margin-top: 20px;
+    color: #777;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    }
+
+/* Layanan */
+.layanan-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.layanan-card {
+    background: var(--faded-copper);
+    color: var(--white);
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.berita-item {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid var(--faded-copper);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.date {
+    color: var(--deep-crimson);
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+/* --- ANIMASI UNTUK KOTAK LAYANAN --- */
+.layanan-card {
+    background: var(--faded-copper);
+    color: var(--white);
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    /* Tambahkan dua baris di bawah ini */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+    cursor: pointer;
+}
+.layanan-card:hover {
+    transform: scale(1.08); /* Membesar 8% */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: var(--dark-coffee); /* Opsional: warna berubah sedikit saat hover */
+}
+/* Tentang Kami */
+.tentang-section h2 {
+    margin-top: 20px;
+}
+.tentang-section {
+    background-color: var(--dark-coffee);
+    color: var(--white);
+}
+
+.visi-misi {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.visi-misi .box {
+    border: 1px solid var(--sand);
+    padding: 25px;
+    margin-bottom: 45px;
+}
+
+/* --- ANIMASI UNTUK ITEM BERITA & EVENT --- */
+.berita-item {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid var(--faded-copper);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    /* Tambahkan dua baris di bawah ini */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.berita-item:hover {
+    transform: scale(1.03); /* Membesar sedikit saja agar tidak menabrak teks lain */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+    border-left-color: var(--deep-crimson);
+}
+
+/* --- ANIMASI UNTUK KOTAK VISI & MISI --- */
+.visi-misi .box {
+    border: 1px solid var(--sand);
+    padding: 20px;
+    /* Tambahkan dua baris di bawah ini */
+    transition: transform 0.4s ease, border-color 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.05); /* Transparansi tipis */
+}
+
+.visi-misi .box:hover {
+    transform: scale(1.05);
+    border-color: var(--white);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* FAQ */
+.faq-item {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.faq-item h5 {
+    color: var(--faded-copper);
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+    /* Image Slider (CSS Only) */
+.slider-container {
+    margin-top: 50px;
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 7px solid #FFFFFF;
+}
+
+.slider {
+    width: 100%;
+}
+
+.slides {
+    display: flex;
+    width: 400%; /* Total slides (termasuk duplikat pertama) */
+    animation: slide-animation 12s infinite ease-in-out;
+}
+
+.slide {
+    width: 25%; /* 100% dibagi 4 slide */
+}
+
+.slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Animasi Slide */
+@keyframes slide-animation {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(0); }
+    25% { transform: translateX(-25%); }
+    45% { transform: translateX(-25%); }
+    50% { transform: translateX(-50%); }
+    70% { transform: translateX(-50%); }
+    75% { transform: translateX(-75%); }
+    95% { transform: translateX(-75%); }
+    100% { transform: translateX(0); }
+
+
+}
